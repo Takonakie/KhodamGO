@@ -1,15 +1,19 @@
 [
     {
-        "merged": "com.example.khodamgo.app-mergeDebugResources-56:/layout/activity_main.xml",
-        "source": "com.example.khodamgo.app-main-59:/layout/activity_main.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-mergeDebugResources-56:\\layout\\activity_khodam.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-main-59:\\layout\\activity_khodam.xml"
     },
     {
-        "merged": "com.example.khodamgo.app-mergeDebugResources-56:/layout/activity_khodam.xml",
-        "source": "com.example.khodamgo.app-main-59:/layout/activity_khodam.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-mergeDebugResources-56:\\layout\\activity_quiz.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-main-59:\\layout\\activity_quiz.xml"
     },
     {
-        "merged": "com.example.khodamgo.app-mergeDebugResources-56:/layout/activity_quiz.xml",
-        "source": "com.example.khodamgo.app-main-59:/layout/activity_quiz.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-mergeDebugResources-56:\\layout\\score_dialog.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-main-59:\\layout\\score_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-mergeDebugResources-56:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.7\\com.example.khodamgo.app-main-59:\\layout\\activity_main.xml"
     },
     {
         "merged": "com.example.khodamgo.app-mergeDebugResources-56:/layout/score_dialog.xml",

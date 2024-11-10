@@ -252,6 +252,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\ACER\\AndroidStudioProjects\\KhodamGO\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,305",
+                        "endLines": "5,7",
+                        "endColumns": "12,64",
+                        "endOffsets": "299,365"
+                    },
+                    "to": {
+                        "startLines": "2523,6452",
+                        "startColumns": "4,4",
+                        "startOffsets": "177054,451210",
+                        "endLines": "2526,6452",
+                        "endColumns": "12,63",
+                        "endOffsets": "177212,451269"
+                    }
+                },
+                {
                     "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-4\\8e68ad66bc98329f79ec6cb51d6cc46f\\transformed\\android-view-lifecycle-1.0.5\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -288,22 +307,20 @@
                     }
                 },
                 {
-                    "source": "C:\\git\\KhodamGO\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\ACER\\AndroidStudioProjects\\KhodamGO\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,305",
-                        "endLines": "5,7",
-                        "endColumns": "12,64",
-                        "endOffsets": "299,365"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "45",
+                        "endOffsets": "57"
                     },
                     "to": {
-                        "startLines": "2523,6452",
-                        "startColumns": "4,4",
-                        "startOffsets": "177054,451210",
-                        "endLines": "2526,6452",
-                        "endColumns": "12,63",
-                        "endOffsets": "177212,451269"
+                        "startLines": "1998",
+                        "startColumns": "4",
+                        "startOffsets": "132207",
+                        "endColumns": "45",
+                        "endOffsets": "132248"
                     }
                 },
                 {
@@ -383,7 +400,7 @@
                     }
                 },
                 {
-                    "source": "C:\\git\\KhodamGO\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\ACER\\AndroidStudioProjects\\KhodamGO\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "2,6,4,5,3",
                         "startColumns": "4,4,4,4,4",
@@ -433,23 +450,6 @@
                         "endLines": "138,141,1059,11388",
                         "endColumns": "55,47,51,24",
                         "endOffsets": "7047,7203,63048,722947"
-                    }
-                },
-                {
-                    "source": "C:\\git\\KhodamGO\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "45",
-                        "endOffsets": "57"
-                    },
-                    "to": {
-                        "startLines": "1998",
-                        "startColumns": "4",
-                        "startOffsets": "132207",
-                        "endColumns": "45",
-                        "endOffsets": "132248"
                     }
                 },
                 {
