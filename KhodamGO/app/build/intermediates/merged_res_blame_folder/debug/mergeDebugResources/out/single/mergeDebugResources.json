@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/layout_activity_main.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/layout_score_dialog.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/layout/score_dialog.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_ic_camera.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/layout_activity_quiz.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/layout/activity_quiz.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/xml_backup_rules.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_rounded_corner.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/rounded_corner.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_baseline_access_time_24.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/baseline_access_time_24.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.khodamgo.app-main-59:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_sigit_rendang.png.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/sigit_rendang.png"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_khodam_.png.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/khodam_.png"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/drawable_skibidi.png.flat",
+        "source": "com.example.khodamgo.app-main-59:/drawable/skibidi.png"
+    },
+    {
+        "merged": "com.example.khodamgo.app-debug-57:/layout_activity_khodam.xml.flat",
+        "source": "com.example.khodamgo.app-main-59:/layout/activity_khodam.xml"
+    }
+]
