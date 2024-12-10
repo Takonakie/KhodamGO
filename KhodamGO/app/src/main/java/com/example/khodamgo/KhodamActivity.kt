@@ -54,17 +54,14 @@ class KhodamActivity : AppCompatActivity() {
 
     private fun getModelPathByScore(khodam:String?): String {
         return when (khodam) {
-            "Khodam A"-> "models/ksatria.glb"
-            "Khodam B"-> "models/ambatron.glb"
-            "Khodam C"-> "models/mothertron.glb"
-            "Khodam D"-> "models/iblis_petarung.glb"
-            "Khodam E"-> "models/dewa_19.glb"
-            "Khodam F"-> "models/dewa_mesir.glb"
-            "Khodam G"-> "models/iblis_neraka.glb"
-            "Khodam H"-> "models/legenda_ayam.glb"
-            "Khodam I"-> "models/naga_biru.glb"
-            "Khodam J"-> "models/dewi_api.glb"
-            "Khodam K"-> "models/kepala_tiga.glb"
+            "Khodam IL"-> "models/ksatria.glb"
+            "Khodam EL"-> "models/ambatron.glb"
+            "Khodam EN"-> "models/mothertron.glb"
+            "Khodam EL2"-> "models/iblis_petarung.glb"
+            "Khodam IN"-> "models/dewa_19.glb"
+            "Khodam IN2"-> "models/dewa_mesir.glb"
+            "Khodam EN2"-> "models/legenda_ayam.glb"
+            "Khodam IL2"-> "models/dewi_api.glb"
             else -> "models/kepala_tiga.glb"
         }
     }
