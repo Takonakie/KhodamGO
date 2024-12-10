@@ -24,6 +24,14 @@ class QuizActivity : AppCompatActivity() {
     private val userAnswersPoint = mutableListOf<Int>()
     private var currentQuestionIndex = 0
 
+    // Track answers in terms of categories
+    private val categoryCounts = mutableMapOf(
+        "Introvert" to 0,
+        "Ekstrovert" to 0,
+        "Logis" to 0,
+        "Intuitif" to 0
+    )
+
     private val userAnswers = mutableListOf<CategoryScore>(
         CategoryScore("Introvert"),
         CategoryScore("Ekstrovert"),
@@ -218,27 +226,24 @@ class QuizActivity : AppCompatActivity() {
 
     private fun handleAnswerSelection(answerIndex: Int) {
         if (answerIndex != -1) {
-            val points = questionModelList[currentQuestionIndex].points[answerIndex]
-            userAnswersPoint.add(points)
-            val currentQuestion = questionModelList[currentQuestionIndex]
-            val selectedOption = currentQuestion.options[answerIndex]
+            val selectedOption = questionModelList[currentQuestionIndex].options[answerIndex]
             val selectedCategory = selectedOption.category
 
-            // Update kategori yang dipilih
-            updateCategoryScore(selectedCategory)
-        }else{
+            // Increment the count for the selected category
+            categoryCounts[selectedCategory] = categoryCounts.getOrDefault(selectedCategory, 0) + 1
+        } else {
             Toast.makeText(this, "Please select an answer", Toast.LENGTH_SHORT).show()
             return
         }
+
         // Move to the next question or navigate to results
         currentQuestionIndex++
         if (currentQuestionIndex < questionModelList.size) {
             displayQuestion(currentQuestionIndex)
         } else {
-            showResults();
+            showResults()
         }
     }
-
 
 
     private fun calculateEuclideanDistance(userAnswers: List<Int>, sampleAnswers: List<Int>): Double {
@@ -249,75 +254,43 @@ class QuizActivity : AppCompatActivity() {
         return sqrt(sum)
     }
 
-    private fun predictKhodam(userAnswers: List<Int>, k: Int): String {
-        val sampleDataList = listOf(
-            SampleModel(listOf(40, 30, 20, 30, 10, 40, 20, 30, 40, 20), "Khodam A"),
-            SampleModel(listOf(10, 20, 30, 10, 30, 10, 40, 30, 10, 40), "Khodam B"),
-            SampleModel(listOf(30, 10, 40, 40, 20, 30, 30, 20, 40, 20), "Khodam C"),
-            SampleModel(listOf(20, 40, 10, 20, 40, 20, 10, 10, 30, 40), "Khodam D"),
-            SampleModel(listOf(30, 20, 30, 30, 20, 10, 20, 30, 10, 40), "Khodam E"),
-            SampleModel(listOf(40, 10, 40, 20, 30, 40, 30, 20, 10, 30), "Khodam F"),
-            SampleModel(listOf(20, 30, 10, 40, 30, 10, 30, 20, 40, 10), "Khodam G"),
-            SampleModel(listOf(10, 30, 40, 30, 40, 20, 40, 30, 20, 20), "Khodam H"),
-            SampleModel(listOf(40, 40, 20, 10, 20, 30, 10, 40, 10, 40), "Khodam I"),
-            SampleModel(listOf(20, 10, 30, 40, 10, 20, 30, 10, 30, 40), "Khodam J"),
-            SampleModel(listOf(10, 40, 30, 20, 40, 10, 40, 20, 30, 10), "Khodam K"),
-            SampleModel(listOf(30, 20, 40, 10, 10, 30, 20, 40, 10, 30), "Khodam J"),
-            SampleModel(listOf(40, 10, 10, 40, 20, 40, 10, 30, 20, 30), "Khodam I"),
-            SampleModel(listOf(20, 40, 10, 20, 40, 10, 30, 40, 10, 40), "Khodam H"),
-            SampleModel(listOf(30, 20, 30, 30, 20, 30, 40, 10, 40, 20), "Khodam G"),
-            SampleModel(listOf(40, 10, 40, 20, 10, 40, 30, 20, 30, 10), "Khodam F"),
-            SampleModel(listOf(20, 30, 10, 40, 30, 10, 30, 10, 30, 40), "Khodam E"),
-            SampleModel(listOf(10, 40, 30, 10, 40, 20, 10, 40, 20, 20), "Khodam D"),
-            SampleModel(listOf(40, 10, 40, 20, 40, 20, 40, 20, 10, 40), "Khodam C"),
-            SampleModel(listOf(10, 30, 40, 10, 20, 10, 30, 20, 10, 30), "Khodam B"),
-            SampleModel(listOf(20, 10, 30, 40, 30, 20, 30, 20, 10, 40), "Khodam A"),
-            SampleModel(listOf(30, 40, 10, 30, 40, 10, 30, 40, 20, 30), "Khodam C"),
-            SampleModel(listOf(20, 30, 40, 20, 10, 20, 10, 20, 40, 10), "Khodam E"),
-            SampleModel(listOf(10, 20, 10, 30, 10, 30, 20, 40, 10, 20), "Khodam G"),
-            SampleModel(listOf(30, 40, 30, 20, 40, 30, 10, 10, 30, 40), "Khodam I"),
-            SampleModel(listOf(20, 30, 20, 10, 20, 10, 20, 40, 30, 20), "Khodam K"),
-            SampleModel(listOf(10, 40, 30, 10, 40, 30, 20, 10, 20, 40), "Khodam A"),
-        )
-
-
-        val distances = sampleDataList.map { sample ->
-            Pair(calculateEuclideanDistance(userAnswers, sample.answers), sample.khodam)
-        }
-
-        // Mengurutkan data lalu ambil n data teredekat dengan nilai k (3)
-        val kNearestNeighbors = distances.sortedBy { it.first }.take(k)
-
-        // hitung jumlah data terbanyak berdasarkan group
-        val khodamCount = kNearestNeighbors.groupingBy { it.second }.eachCount()
-
-
-        return khodamCount.maxByOrNull { it.value }?.key ?: "Khodam K"
-    }
-
-    private fun updateCategoryScore(category: String) {
-        val categoryScore = userAnswers.find { it.category == category }
-        categoryScore?.points = (categoryScore?.points ?: 0) + 1
-    }
 
     private fun showResults() {
 
-        val highestCategory = userAnswers.maxByOrNull { it.points }
-        val personalityType = highestCategory?.category ?: "Tidak Diketahui"
-        val explanation = getExplanationForPersonality(personalityType)
-        val khodam = predictKhodam(userAnswersPoint, 3)
+        // Identify the top 2 categories
+        val sortedCategories = categoryCounts.entries.sortedByDescending { it.value }
+        val topCategories = sortedCategories.take(2)
 
-        val intent = Intent(this, ResultPersonalityActivity::class.java)
-        intent.putExtra("personalityType", personalityType)
-        intent.putExtra("KHODAM_RESULT",khodam);
-        intent.putExtra("explanation", explanation)
-        startActivity(intent)
-        finish()
+        // Handle tie-breaking logic if necessary
+        if (topCategories.size == 2 && topCategories[0].value == topCategories[1].value) {
+            // Tie case: select the most frequent category
+            val mostFrequentKey = topCategories.maxByOrNull { it.value }?.key ?: "Introvert"
+            // Pass a default second category
+            predictKhodam(mostFrequentKey, "Introvert")
+        } else {
+            // If no tie, use the two most frequent categories
+            predictKhodam(topCategories[0].key, topCategories[1].key)
+        }
 
     }
 
+    private fun predictKhodam(category1: String, category2: String) {
+        // Match the khodam based on the two categories
+        val khodam = when {
+            category1 == "Introvert" && category2 == "Logis" -> "Khodam IL"
+            category1 == "Introvert" && category2 == "Logis" -> "Khodam IL2"
+            category1 == "Introvert" && category2 == "Intuitif" -> "Khodam IN"
+            category1 == "Introvert" && category2 == "Intuitif" -> "Khodam IN2"
+            category1 == "Extrovert" && category2 == "Logis" -> "Khodam EL"
+            category1 == "Extrovert" && category2 == "Logis" -> "Khodam EL2"
+            category1 == "Extrovert" && category2 == "Intuitif" -> "Khodam EN"
+            category1 == "Extrovert" && category2 == "Intuitif" -> "Khodam EN2"
+            else -> "Unknown Khodam"
+        }
+    }
 
-    private fun getExplanationForPersonality(personalityType: String): String {
+
+        private fun getExplanationForPersonality(personalityType: String): String {
         return when (personalityType) {
             "" -> """
             Berdasarkan jawaban yang kami dapatkan anda adalah Pribadi yang energik dan antusias. Anda merasa paling hidup saat berada di tengah keramaian atau berinteraksi dengan banyak orang.
